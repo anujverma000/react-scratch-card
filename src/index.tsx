@@ -188,14 +188,7 @@ class Scratch extends Component<Props, State> {
     this.isDrawing = true;
     this.lastPoint = this.getMouse(e, this.canvas);
   }
-
-  handleMouseMove = (e: any) => {
-    if (!this.isDrawing) {
-      return;
-    }
-
-    e.preventDefault();
-
+  onMove = (e: any) => {
     const currentPoint = this.getMouse(e, this.canvas);
     const distance = this.distanceBetween(this.lastPoint, currentPoint);
     const angle = this.angleBetween(this.lastPoint, currentPoint);
@@ -224,6 +217,21 @@ class Scratch extends Component<Props, State> {
 
     this.lastPoint = currentPoint;
     this.handlePercentage(this.getFilledInPixels(32));
+  }
+
+  handleMouseMove = (e: any) => {
+    if (!this.isDrawing) {
+      return;
+    }
+    e.preventDefault();
+    this.onMove(e);
+  }
+
+  handleTouchMove = (e: any) => {
+    if (!this.isDrawing) {
+      return;
+    }
+    this.onMove(e);
   }
 
   handleMouseUp = () => {
@@ -268,7 +276,7 @@ class Scratch extends Component<Props, State> {
           onMouseDown={this.handleMouseDown}
           onTouchStart={this.handleMouseDown}
           onMouseMove={this.handleMouseMove}
-          onTouchMove={this.handleMouseMove}
+          onTouchMove={this.handleTouchMove}
           onMouseUp={this.handleMouseUp}
           onTouchEnd={this.handleMouseUp}
         />

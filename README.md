@@ -1,33 +1,18 @@
-# react-scratchcard-v2
+# react-scratch-code
 
-> A scratchcard component for React
+> A scratch card component for React
 
-[![NPM](https://img.shields.io/npm/v/react-scratchcard-v2.svg)](https://www.npmjs.com/package/react-scratchcard-v2) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
-
-##### Original repo by Aleksik (not maintained)
-https://github.com/aleksik/react-scratchcard
-
-##### V2 Improvement ✨
-- Resize the image using width and height props (in the original repo, the image was croped)
-- Smooth fade out animation on scratch complete
-- Add type definition (ts)
-- Change brush size through props
-- Use custom brush through props
-- Define a custom check zone through props
-
-## Demo
-
-![scratchcard-demo](https://user-images.githubusercontent.com/22329040/140519100-b6ee86e3-0009-4ab6-bcd0-c7fefdb8720d.gif)
+##### Improvement ✨
+- Avoid preventDefault from passive event listeners
 
 ## Install
 
 ```bash
-npm install --save react-scratchcard-v2
+npm install --save react-scratch-code
 ```
 or
 ```bash
-yarn add react-scratchcard-v2
+yarn add react-scratch-code
 ```
 
 
@@ -35,7 +20,7 @@ yarn add react-scratchcard-v2
 
 ```tsx
 import React, { useRef }  from 'react';
-import ScratchCard from 'react-scratchcard-v2';
+import ScratchCard from 'react-scratch-code';
 
 import * as IMG from './img.jpg';
 
@@ -100,7 +85,7 @@ const App = () => {
 or you can use CUSTOM_BRUSH_PRESET object
 
 ```tsx
-import { CUSTOM_BRUSH_PRESET } from 'react-scratchcard-v2';
+import { CUSTOM_BRUSH_PRESET } from 'react-scratch-code';
 
 const App = () => {
   return (
@@ -157,4 +142,4 @@ const App = () => {
 
 ## License
 
-MIT © [dopey2](https://github.com/dopey2)
+MIT © [anujverma000](https://github.com/anujverma000)

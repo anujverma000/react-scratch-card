@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import ScratchCard, { CUSTOM_BRUSH_PRESET } from 'react-scratchcard-v2'
+import ScratchCard, { CUSTOM_BRUSH_PRESET } from 'react-scratch-code'
 
 import * as IMG from './img.jpg'
 
